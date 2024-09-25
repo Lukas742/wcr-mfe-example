@@ -1,4 +1,4 @@
-# UI5 Web Components for React example for testing purposes
+# UI5 Web Components for React - MFE basic example
 
 ## Install
 
