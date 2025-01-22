@@ -2,6 +2,7 @@
   "name": "host",
   "version": "1.0.0",
   "sideEffects": [
+    "scoping.ts",
     "*.css"
   ],
   "scripts": {
@@ -37,10 +38,15 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@ui5/webcomponents": "1.24.10",
-    "@ui5/webcomponents-fiori": "1.24.10",
-    "@ui5/webcomponents-icons": "1.24.10",
-    "@ui5/webcomponents-base": "1.24.10",
-    "@ui5/webcomponents-react": "1.29.11"
+    "@ui5/webcomponents": "2.6.2",
+    "@ui5/webcomponents-fiori": "2.6.2",
+    "@ui5/webcomponents-icons": "2.6.2",
+    "@ui5/webcomponents-base": "2.6.2",
+    "@ui5/webcomponents-react": "2.6.0",
+    "v1-webcomponents": "npm:@ui5/webcomponents@1.24.15",
+    "v1-webcomponents-fiori": "npm:@ui5/webcomponents-fiori@1.24.15",
+    "v1-webcomponents-icons": "npm:@ui5/webcomponents-icons@1.24.15",
+    "v1-webcomponents-base": "npm:@ui5/webcomponents-base@1.24.15",
+    "v1wcr": "npm:@ui5/webcomponents-react@1.29.16"
   }
 }

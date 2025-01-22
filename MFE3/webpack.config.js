@@ -57,6 +57,10 @@ module.exports = (_, argv) => ({
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.json$/,
+        type: "json", // For Webpack v5, this tells Webpack to handle JSON natively
+      },
     ],
   },
 

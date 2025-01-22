@@ -1,22 +1,26 @@
 // import "@ui5/webcomponents-react/styles.css";
+import "./scoping.ts";
 import {
+  Button,
   FlexBox,
   FlexBoxDirection,
+  Modals,
   ThemeProvider,
 } from "@ui5/webcomponents-react";
 import React from "react";
 
 function UI5WCRComponents() {
-  console.log("mfe3");
+  // const showToast = Modals.useShowDialog();
   return (
     // <ThemeProvider staticCssInjected>
     <ThemeProvider>
-      <FlexBox direction={FlexBoxDirection.Column}>
-        <button>Should</button>
-        <button>Have</button>
-        <button>Column</button>
-        <button>Layout</button>
-      </FlexBox>
+      <Button
+        onClick={() => {
+          Modals.showToast({ duration: 123456789, children: "Modal - MFE3" });
+        }}
+      >
+        Show Modal (v1 - mfe3)
+      </Button>
     </ThemeProvider>
   );
 }

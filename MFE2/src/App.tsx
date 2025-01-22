@@ -14,7 +14,7 @@ const rootElement = document.getElementById("app");
 const root = createRoot(rootElement as HTMLElement);
 
 root.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  // <ThemeProvider>
+  <App />,
+  // </ThemeProvider>,
 );

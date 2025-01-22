@@ -1,28 +1,38 @@
+import "./scoping.ts";
 // import "@ui5/webcomponents-react/styles.css";
 import {
   FlexBox,
-  FlexBoxDirection, SplitterElement, SplitterLayout,
+  FlexBoxDirection,
+  SplitterElement,
+  SplitterLayout,
+  Modals,
   ThemeProvider,
+  Button,
 } from "@ui5/webcomponents-react";
 import React from "react";
 
 function UI5WCRComponents() {
-  // debugger;
-  console.log("mfe2");
   return (
     // <ThemeProvider staticCssInjected>
     <ThemeProvider>
-      <FlexBox direction={FlexBoxDirection.Column}>
-        <button>Should</button>
-        <button>Have</button>
-        <button>Column</button>
-        <button>Layout</button>
-      </FlexBox>
-      <SplitterLayout style={{ height: "200px" }}>
-        <SplitterElement>Some content</SplitterElement>
-        <SplitterElement>Some content</SplitterElement>
-        <SplitterElement>Some content</SplitterElement>
-      </SplitterLayout>
+      <div id="container1" />
+      <Button
+        onClick={() => {
+          Modals.showToast(
+            { duration: 123456789, children: "Modal - MFE2" },
+            document.getElementById("container1"),
+          );
+        }}
+      >
+        Show Modal (v1 - mfe2)
+      </Button>
+      <Button
+        onClick={() => {
+          Modals.showDialog({ children: "Modal2 - MFE2" });
+        }}
+      >
+        Show Modal2 (v1 - mfe2)
+      </Button>
     </ThemeProvider>
   );
 }

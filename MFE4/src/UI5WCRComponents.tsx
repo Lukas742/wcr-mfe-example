@@ -1,29 +1,20 @@
 // import "@ui5/webcomponents-react/styles.css";
-import {
-  FlexBox,
-  FlexBoxDirection,
-  SplitterElement,
-  SplitterLayout,
-  ThemeProvider,
-} from "@ui5/webcomponents-react";
+import { Button, Modals, ThemeProvider } from "@ui5/webcomponents-react";
 import React from "react";
+// import { setCustomElementsScopingSuffix } from "@ui5/webcomponents-base/dist/CustomElementsScope.js";
+// setCustomElementsScopingSuffix("mfe4");
 
 function UI5WCRComponents() {
   console.log("mfe4");
   return (
-    // <ThemeProvider staticCssInjected>
     <ThemeProvider>
-      <FlexBox direction={FlexBoxDirection.Column}>
-        <button>Should</button>
-        <button>Have</button>
-        <button>Column</button>
-        <button>Layout</button>
-      </FlexBox>
-      <SplitterLayout style={{ height: "200px" }}>
-        <SplitterElement>Some content</SplitterElement>
-        <SplitterElement>Some content</SplitterElement>
-        <SplitterElement>Some content</SplitterElement>
-      </SplitterLayout>
+      <Button
+        onClick={() => {
+          Modals.showToast({duration: 123456789, children: "Modal - MFE4" });
+        }}
+      >
+        Show Modal (v1 - mfe4)
+      </Button>
     </ThemeProvider>
   );
 }

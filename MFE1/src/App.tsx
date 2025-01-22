@@ -1,3 +1,4 @@
+import "./scoping";
 import { ThemeProvider } from "@ui5/webcomponents-react";
 import React from "react";
 import { createRoot } from "react-dom/client";
@@ -14,7 +15,7 @@ const rootElement = document.getElementById("app");
 const root = createRoot(rootElement as HTMLElement);
 
 root.render(
-  <ThemeProvider>
+  // <ThemeProvider>
     <App />
-  </ThemeProvider>,
+  // </ThemeProvider>,
 );

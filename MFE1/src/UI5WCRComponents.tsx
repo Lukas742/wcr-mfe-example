@@ -1,22 +1,19 @@
-import {
-  FlexBox,
-  FlexBoxDirection,
-  SplitterElement,
-  SplitterLayout,
-  ThemeProvider,
-} from "@ui5/webcomponents-react";
+import "./scoping.ts";
+console.log("import mfe1 wc comp");
+import { Button, Modals, ThemeProvider } from "@ui5/webcomponents-react";
 import React from "react";
 
 function UI5WCRComponents() {
-  console.log("mfe1");
   return (
     <ThemeProvider>
-      <FlexBox direction={FlexBoxDirection.Column}>
-        <button>Should</button>
-        <button>Have</button>
-        <button>Column</button>
-        <button>Layout</button>
-      </FlexBox>
+      {/*<Modals />*/}
+      <Button
+        onClick={() => {
+          Modals.showToast({ duration: 123456789, children: "Modal - MFE1" });
+        }}
+      >
+        Show Modal (v2 - mfe1)
+      </Button>
     </ThemeProvider>
   );
 }

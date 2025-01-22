@@ -2,7 +2,7 @@ import { ObjectStatus } from "@ui5/webcomponents-react";
 import pkg from "@ui5/webcomponents-react/package.json";
 import React from "react";
 
-const MFEName = "MFE5";
+const MFEName = "Host";
 
 const Version = ({ withI18n }: { withI18n?: boolean }) => {
   const [_withI18n, toggleI18n] = React.useReducer((prev) => !prev, withI18n);

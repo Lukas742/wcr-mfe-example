@@ -57,6 +57,10 @@ module.exports = (_, argv) => ({
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.json$/,
+        type: "json", // For Webpack v5, this tells Webpack to handle JSON natively
+      },
     ],
   },
 
@@ -68,6 +72,7 @@ module.exports = (_, argv) => ({
       exposes: {
         "./Version": "./src/Version",
         "./UI5WCRComponents": "./src/UI5WCRComponents",
+        "./scoping": "./src/scoping",
       },
       shared: {
         ...deps,
