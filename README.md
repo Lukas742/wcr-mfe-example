@@ -7,3 +7,6 @@ Run `npm i` in each project or use this script: `npx concurrently "cd MFE1 && np
 ## Start
 
 Start each project individually by running `npm start` or `npm run dev` or use this script: `npx concurrently "cd MFE1 && npm start" "cd MFE2 && npm start" "cd MFE3 && npm start" "cd MFE4 && npm start" "cd MFE5 && npm start" "cd host && npm start"`
+
+## Cleanup node_modules
+npx concurrently "cd MFE1 && npm run clean" "cd MFE2 && npm run clean" "cd MFE3 && npm run clean" "cd MFE4 && npm run clean" "cd MFE5 && npm run clean" "cd host && npm run clean"
